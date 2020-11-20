@@ -55,7 +55,7 @@ def create_job_file_pe(reference, samplefile1, samplefile2, bedfile, in_dir, out
     job_body3 = job_body3.format(prefix, reference, prefix+'/'+basename+ '_filtered.bam')
 
     job_body4 = 'slamdunk count -o {} -s {} -r {} -b {} -t 1 {}'
-    job_body4 = job_body4.format(prefix, prefix+'/*.vcf',reference, bedfile, prefix+'/'+basename+ '_filtered.bam')
+    job_body4 = job_body4.format(prefix, prefix+ '/' + basename+ '_filtered_snp.vcf',reference, bedfile, prefix+ '/' + basename + '_filtered.bam')
 
     
     jobfile = prefix + ".sh"
