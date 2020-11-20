@@ -39,6 +39,7 @@ def create_job_file_pe(reference, samplefile1, samplefile2, bedfile, in_dir, out
     job_header += '#BSUB -P SLAMdunk\n'
     job_header += '#BSUB -J {}_SLAMdunk\n'
     job_header += '#BSUB -n 1\n'
+    job_header += '#BSUB --R "rusage[mem=32000]"\n'
     job_header += '#BSUB -B xzhen@stjude.org\n'
     job_header += '#BSUB -N xzhen@stjude.org\n'
     job_header = job_header.format(basename)
